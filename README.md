@@ -1,3 +1,21 @@
+
+Hey, this project was indeed created create-react-app so I will leave their comments in my readme.  However, the more important info is that this react project is deployed at  https://krugclicker.herokuapp.com/ Enjoy!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
