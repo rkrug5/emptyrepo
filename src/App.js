@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+import './style.css';
+
+
+
+
+
+
+
 // import Images from './components/Images';
 class App extends Component {
 
@@ -8,26 +16,29 @@ class App extends Component {
   // Setting the initial state of the score component
   state = {
     score: 0,
-    highScore: 0
+    highScore: 0,
+    clickedImages: []
   };
 
 
   // handleIncrement increases this.state.score by 1
-  handleScoreIncrement = () => {
+  // handleScoreIncrement = () => {
     // We always use the setState method to update a component's state
-    this.setState({ score: this.state.score + 1 });
-  };
+    // this.setState({ score: this.state.score + 1 });
+  // };
 
 
   handleClick = () => {
     // this.setState({ score: this.state.score + 1 });
-    this.handleScoreIncrement();
-
+    // this.handleScoreIncrement();
+    this.incrementScore();
+    this.pushSelection();
 
   };
 
   incrementScore = () => {
     this.setState({ score: this.state.score + 1 });
+    this.gameOverCheck();
 
 
   };
@@ -35,16 +46,26 @@ class App extends Component {
   highScore = () => {
 if (this.score >= this.highScore) {
 
-    this.setState({ score: this.state.highScore + 1 });
+    this.setState({ highScore: this.state.highScore + 1 });
 }
-
-
-
   }
+gameOverCheck = () => {
+  let youWon = "you won.  you have a great memory!"
+if (this.state.score === 9 ) {
+
+  alert(youWon);
+  this.setState({score: 0});
+}
+};
+
+
+
+  
 
   
   pushSelection = () => {
     let clickedImages = [];
+
 
 
   };
@@ -72,36 +93,22 @@ if (this.score >= this.highScore) {
   render() {
     return (
       <div className="App">
-        <nav className="navbar navbar-expand-lg navbar-light  navbar-fixed-top " style={{ background: 'red' }}>
-          {/* <a className="navbar-brand" href="#"></a> */}
 
-          <h1 style={{ color: 'white' }}>Clicky</h1>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
 
-          {//more code for testing, trying to get the score working}
-          }
-          <button className="btn btn-primary" type='primary' onClick={this.handleScoreIncrement}>Score?</button>
 
-          <div className="collapse navbar-collapse" id="navbarText">
-            {/* <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <h3> Click the pictures only once.</h3>
-              </li>
-
-            </ul> */}
-            <span className="navbar-text" style={{ color: 'white' }}>
-              Current Score
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top " style={{ background: 'red' }}>
+          <h1 id='logo' style={{ color: 'white' }}>Clicky</h1>
+       
+            <div className="navbar-text" id='score'>
+              
               <h3 className="card-text"> Current Score: {this.state.score}</h3>
-        </span>
-            {/* <span className="navbar-text" style={{ color: 'white' }}>
-            <p className="card-text">Click Count: {this.state.highScore}</p>
-            
-              High Score
-        </span> */}
-          </div>
+        </div>
         </nav>
+
+
+
+
+
         <div className="jumbotron">
           <h1>Hi. Welcome to the game.</h1>
           <p>

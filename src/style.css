@@ -1,0 +1,23 @@
+.navbar-text {
+float: right;
+	text-align: center;
+	 color: white;
+}
+
+.jumbotron {
+
+	text-align: center;
+
+
+}
+.card-text {
+	text-align: center;
+}
+
+#score {
+	float:right;
+}
+ 
+#logo {
+	margin-right: 50rem;
+}
