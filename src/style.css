@@ -5,7 +5,7 @@ float: right;
 }
 
 .jumbotron {
-
+padding-top: 10%;
 	text-align: center;
 
 
@@ -19,5 +19,14 @@ float: right;
 }
  
 #logo {
-	margin-right: 50rem;
+	margin-right: 45rem;
+	
+}
+
+#score {
+margin-right: 5rem;
+}
+
+p {
+	font-size: 24px;
 }
