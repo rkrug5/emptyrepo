@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+// import Images from './components/Images';
 class App extends Component {
 
 
@@ -19,6 +19,35 @@ class App extends Component {
   };
 
 
+  handleClick = () => {
+    // this.setState({ score: this.state.score + 1 });
+    this.handleScoreIncrement();
+
+
+  };
+
+  incrementScore = () => {
+    this.setState({ score: this.state.score + 1 });
+
+
+  };
+
+  highScore = () => {
+if (this.score >= this.highScore) {
+
+    this.setState({ score: this.state.highScore + 1 });
+}
+
+
+
+  }
+
+  
+  pushSelection = () => {
+    let clickedImages = [];
+
+
+  };
   //THIS COPY PASTED CODE FOR TESTING/DEVLOPMENT
   // handleDecrement decreases this.state.count by 1
   // handleDecrement = () => {
@@ -63,12 +92,14 @@ class App extends Component {
 
             </ul> */}
             <span className="navbar-text" style={{ color: 'white' }}>
-              <p className="card-text">Click Count: {this.state.score}</p>
               Current Score
+              <h3 className="card-text"> Current Score: {this.state.score}</h3>
         </span>
-            <span className="navbar-text" style={{ color: 'white' }}>
+            {/* <span className="navbar-text" style={{ color: 'white' }}>
+            <p className="card-text">Click Count: {this.state.highScore}</p>
+            
               High Score
-        </span>
+        </span> */}
           </div>
         </nav>
         <div className="jumbotron">
@@ -84,63 +115,63 @@ class App extends Component {
             <div className="col-md-4">
               <div className="card mb-3 box-shadow border-dark">
                 <a className="charId">
-                  <img className="img-fluid card-img-top" src="./images/mon1.jpg" alt="Monsoon 1" />
+                  <img className="img-fluid card-img-top" src="./images/mon1.jpg" alt="Monsoon 1" onClick={this.handleClick}/>
                 </a>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card mb-3 box-shadow border-dark">
                 <a className="charId">
-                  <img className="img-fluid card-img-top" src="./images/mon2.jpg" alt="Monsoon 2" />
+                  <img className="img-fluid card-img-top" src="./images/mon2.jpg" alt="Monsoon 2" onClick={this.handleClick}/>
                 </a>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card mb-3 box-shadow border-dark">
                 <a className="charId">
-                  <img className="img-fluid card-img-top border-dark" src="./images/mon3.jpg" alt="Monsoon 3" />
+                  <img className="img-fluid card-img-top border-dark" src="./images/mon3.jpg" alt="Monsoon 3" onClick={this.handleClick}/>
                 </a>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card mb-3 box-shadow border-dark">
                 <a className="charId">
-                  <img className="img-fluid card-img-top border-dark" src="./images/mon4.jpg" alt="Monsoon 4" />
+                  <img className="img-fluid card-img-top border-dark" src="./images/mon4.jpg" alt="Monsoon 4" onClick={this.handleClick}/>
                 </a>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card mb-3 box-shadow border-dark">
                 <a className="charId">
-                  <img className="img-fluid card-img-top" src="./images/mon5.jpg" alt="Monsoon 5" />
+                  <img className="img-fluid card-img-top" src="./images/mon5.jpg" alt="Monsoon 5" onClick={this.handleClick}/>
                 </a>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card mb-3 box-shadow border-dark">
                 <a className="charId">
-                  <img className="img-fluid card-img-top" src="./images/mon6.jpg" alt="Monsoon 6" />
+                  <img className="img-fluid card-img-top" src="./images/mon6.jpg" alt="Monsoon 6" onClick={this.handleClick}/>
                 </a>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card mb-3 box-shadow border-dark">
                 <a className="charId">
-                  <img className="img-fluid card-img-top" src="./images/mon7.jpg" alt="Monsoon 7" />
+                  <img className="img-fluid card-img-top" src="./images/mon7.jpg" alt="Monsoon 7" onClick={this.handleClick}/>
                 </a>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card mb-3 box-shadow border-dark">
                 <a className="charId">
-                  <img className="img-fluid card-img-top" src="./images/mon8.jpg" alt="Monsoon 8" />
+                  <img className="img-fluid card-img-top" src="./images/mon10.jpg" alt="Monsoon 8" onClick={this.handleClick}/>
                 </a>
               </div>
             </div>
             <div className="col-md-4">
               <div className="card mb-3 box-shadow border-dark">
                 <a className="charId">
-                  <img className="img-fluid card-img-top" src="./images/mon9.jpg" alt="Monsoon 9" />
+                  <img className="img-fluid card-img-top" src="./images/mon9.jpg" alt="Monsoon 9" onClick={this.handleClick}/>
                 </a>
               </div>
             </div>
