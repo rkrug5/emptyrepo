@@ -7,6 +7,11 @@ import cards from './cards.js';
 
 let clickedImages = [];
 console.log(cards);
+console.log(cards.length);
+
+
+
+
 
 class App extends Component {
 
@@ -31,6 +36,14 @@ class App extends Component {
     // this.setState({ score: this.state.score + 1 });
   // };
 
+//this function is mostly based on something from mtking78 on github
+//mine couldn't read the 'property of undefined'
+shuffleCards = () => {
+  for (let i = 0; i < cards.length; i++) {
+      const j = Math.floor(Math.random() * (9));
+      [cards[i], cards[j]] = [cards[j], cards[i]];
+  }
+};
 
   handleClick = id => {
       // check clickedArr to see if id is there
@@ -50,6 +63,7 @@ class App extends Component {
           this.highScore();
           this.gameOverCheck();
           clickedImages.push(id);
+          this.shuffleCards();
         });
         
     
@@ -78,6 +92,8 @@ if (this.state.score === this.state.cards.length) {
   this.setState({score: 0});
 }
 };
+
+
 
 
 
@@ -113,19 +129,17 @@ if (this.state.score === this.state.cards.length) {
 
 <div className="container">
 
-
+<div className="row">
 
 {this.state.cards.map(card => (
   <Picture src={card.src} name={card.name} id={card.id} onClick={this.handleClick.bind(this, card.id)}/>
 
 ))}
 </div>
-    
-    {/* <Images /> */}
+    </div>
   
 
-
-      </div>
+</div>
     );
   }
 }
