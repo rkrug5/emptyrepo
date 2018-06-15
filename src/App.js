@@ -113,11 +113,12 @@ if (this.state.score === this.state.cards.length) {
 
 <div className="container">
 
+
+
 {this.state.cards.map(card => (
   <Picture src={card.src} name={card.name} id={card.id} onClick={this.handleClick.bind(this, card.id)}/>
 
 ))}
-
 </div>
     
     {/* <Images /> */}
