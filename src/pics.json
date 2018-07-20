@@ -2,12 +2,12 @@
 	{
 		"id": 1,
 		"name": "mon1",
-		"src": "./images/mon1.jpg"
+		"src": "./images/enfp.jpg"
 	},
 	{
 		"id": 2,
 		"name": "mon2",
-		"src": "./images/mon2.jpg"
+		"src": "./images/entp.jpg"
 	},
 	{
 		"id": 3,
